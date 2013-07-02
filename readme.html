@@ -1,0 +1,135 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Appalaches - Soleicare (projection)</title>
+		
+		<link 
+			rel="stylesheet" 
+			href="assets/css/vendor/html5-boilerplate/normalize.css"
+			>
+		<link 
+			rel="stylesheet" 
+			href="assets/css/vendor/html5-boilerplate/main.css"
+			>
+		<link 
+			rel="stylesheet" 
+			href="assets/css/vendor/html5-boilerplate/main.css"
+			>
+		<link 
+			rel="stylesheet" 
+			href="assets/css/layout.css"
+			>
+
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+
+	<body>
+		<!-- content start -->
+		<div id="wrapper">
+
+			<header class="centered">
+				<h1>Appalaches - Soleicare</h1>
+				<p>Projection</p>
+			</header>
+
+			<div id="content" class="centered">
+
+				<div id="about" class="contentBlock">
+					<h2>About</h2>
+					<p>When I was a kid, I used to watch <a href="http://www.youtube.com/watch?v=BO4trnVSSeQ">Nankyoku Monogatari</a> all the time. Vangelis's <a href="http://www.youtube.com/watch?v=ajQSz8EQScg">Theme from Antartica</a> had a huge emotional impact on me.</p>
+					<p>Back when I was living in Amsterdam, I had an attic in my apartment. There, I had my studio in which I started writing Soleicare. When I joined Appalaches, we eventually completed the song. The different dynamics of the song deserved visuals that were as epic as Nankyoku Monogatari's, so I went through the film and selected all the nature scenes that would fit that mood.</a>
+					<p>This document outlines how to use the Max patch created to edit video live while the band is performing Soleicare on stage.</p>
+					<p class="signature">-mat.</p>
+				</div>
+
+				<div id="howTo" class="contentBlock">
+					<h2>How to use the Max patch</h2>
+
+					<div class="instructionBlock">
+						<h3>MIDI Setup</h3>
+						<p>The ReMOTE ZeRO SL MIDI controller <em>must</em> be connected to the computer via USB <em>before</em> opening the patch.</p>
+						<img class="screenshot" src="assets/images/midi-mapping.jpg">
+						<p>The image above explains which controls do what in the patch.</p>
+					</div>
+
+					<div class="instructionBlock">
+						<h3>Initial Patch setup</h3>
+						
+						<p>Once you opened the Max patch, there are some minor initial settings that are required. They are mostly grouped at the top left of the patch canvas. Below is a screenshot and an explanation of what the settings are.</p>
+						<p>Make certain to activate them in the order in which they are described.</p>
+						<img class="screenshot" src="assets/images/max-init-setup.jpg">
+						
+						<h4>1. setRelPath</h4>
+						<p>Sets the path relative to the Max patch. Once you click that button, choose the directory in which the patch sits.</p>
+						
+						<h4>2. selMainVideos</h4>
+						<p>Selects the main video file. Should be located at videos/main-jpeg.mov</p>
+						
+						<h4>3. selAB1Videos</h4>
+						<p>Selects the aurora borealis video file. Should be located at videos/aurora-borealis-01-jpeg.mov</p>
+						
+						<h4>4. selAB2Videos</h4>
+						<p>Selects the flipped aurora borealis video file. Should be located at videos/aurora-borealis-02-flipped-jpeg.mov</p>
+						
+						<h4>5. initMetronome</h4>
+						<p>Max videos require a metronome to run. Activate this metronome once all the previous settings are completed.</p>
+						
+						<h4>6. mainVideoVidsButton</h4>
+						<p>Once all is set, click this button to start the main video.</p>
+					</div>
+					
+					<div class="instructionBlock">
+						<h3>Start playing with video scenes</h3>
+						<img class="screenshot" src="assets/images/computer-setup.jpg">
+						
+						<h4>Show the video</h4>
+						<img class="screenshot" src="assets/images/max-main-video-slider.jpg">
+						<p>Now you're ready to play with the scenes! Although there is probably currently no output in your video window. The video starts already faded to black. If you take a look at the MIDI controller diagram, you'll see on the top right a slider is assigned to the main video.</p>
+						<p>Alternatively, you can use the slider UI in the patch.</p>
+						<p>Once the slider is up, the video will become visible.</p>
+
+						<h4>Show the title</h4>
+						<img class="screenshot alignRight" src="assets/images/max-title-video-slider.jpg">
+						<p>There is a title video to add to the video at the beginning of the song. You can see an example of what that title looks like in the photo above.</p>
+						<p>Just like the video, the titles need to be faded in. See the MIDI controller diagram to find which slider to use.</p>
+						<p>In this case also, you could use the slider UI in the patch.</p>
+
+						<h4>Go to next or previous video</h4>
+						<img class="screenshot" src="assets/images/max-video-id-selection.jpg">
+						<p>Live video editing consists of changing scenes on the go, to fit with the music. A scenario will be followed, however this interactive video allows for a certain flexibility.</p>
+						<p>The way the scenario is built is that a certain amount of videos are preselected for each part of the song, but the editor choose at what moment to go to the next or previous video in this batch. Most probably according to the beat or the changing measures of the song.</p>
+						<p>The media control buttons at the bottom of the MIDI controller are assigned to do just that. See the diagram to see thoes buttons, and again, you can use the Max UI to control those changes.</p>
+						<p><br></p>
+
+						<h4>Switching between main videos and aurora borealis video</h4>
+						<img class="screenshot" src="assets/images/aurora-borealis-preview.jpg">
+						<p>During the bridge, the main videos will be replaced by two streams of aurora borealis overlaid on top of each other, to create intensity.</p>
+						<p>See the MIDI controller diagram on how to switch the video types. In the Max patch, the buttons are in the init setup area.</p>
+					</div>
+				</div>
+
+				<div id="scenario" class="contentBlock">
+					<h2>Scenario</h2>
+				</div>
+
+				<div id="scenes" class="contentBlock">
+					<h2>Main Scenes</h2>
+					<!-- NOTE: scene detail divs are added in javascript -->
+				</div>
+
+			</div>
+
+		</div>
+		<!-- content end -->
+
+		<!-- scripts start -->
+		<script src="assets/js/vendor/jquery-1.9.1.min.js"></script>
+		<script src="assets/js/appalaches-soleicare-read-me.js"></script>
+		<!-- scripts end -->
+	</body>
+
+</html>

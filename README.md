@@ -1,2 +1,2 @@
-appalaches-projections-soleicare
-================================
+Appalaches - Soleicare Projection
+=================================
