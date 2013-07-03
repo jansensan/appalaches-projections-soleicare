@@ -270,6 +270,7 @@ function createSceneDetails()
 		var sceneDetail = '<div class="sceneDetail">';
 			sceneDetail += '<img src="' + SCENES_VOS[i].url + '" class="thumb">';
 			sceneDetail += '<div class="description">'
+				sceneDetail += '<p><strong>ID:</strong> ' + SCENES_VOS[i].id + '</p>';
 				sceneDetail += '<p><strong>Description:</strong><br>' + SCENES_VOS[i].description + '</p>';
 				sceneDetail += '<p><strong>Duration:</strong><br>' + SCENES_VOS[i].duration + '</p>';
 				sceneDetail += '<p><strong>Notes:</strong><br>' + SCENES_VOS[i].notes + '</p>';
