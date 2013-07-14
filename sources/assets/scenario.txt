@@ -1,0 +1,34 @@
+01 - fade in intro
+1, 2, 3
+
+02 - title intro (fade in title over first video)
+6, 4, 5
+
+03 - active intro
+4, 5, 8, 22, 21
+
+04 - chorus 01
+11, 10, 9, 12, 6
+
+05 - verse 01
+7, 8, 5, 16, 19
+
+06 - chorus 02
+12, 21, 16, 22, 11, 8, 6
+
+07 - verse 02
+19, 8, 9, 17, 13, 14, 15
+
+08 - chorus 03
+18, 24, 26, 27, 25
+
+09 - break 01 (quick strumming)
+23
+
+10 - break 02
+29
+
+11 - aurora borealis
+
+12 - finale
+30
